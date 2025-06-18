@@ -73,7 +73,7 @@ Here you can see the information required for each page. It is import that each 
 
 In addition all pages have access to the following
 `prices` - must contain two peices of information if used.
-'colors' - must contain one CupertinoDynamicColor and must be declared on all pages if used on one. 
+'colors' - must contain one Color and must be declared on all pages if used on one. 
 
 ## Additional information
 

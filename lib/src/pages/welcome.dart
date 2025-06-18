@@ -8,7 +8,7 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CupertinoDynamicColor highlightColor = CupertinoColors.activeBlue;
+    Color highlightColor = CupertinoColors.activeBlue;
     if (content.colors != null) {
       highlightColor = content.colors![0];
     }

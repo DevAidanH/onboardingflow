@@ -13,7 +13,7 @@ class Paywall extends StatefulWidget {
 class _PaywallState extends State<Paywall> {
   @override
   Widget build(BuildContext context) {
-    CupertinoDynamicColor highlightColor = CupertinoColors.activeBlue;
+    Color highlightColor = CupertinoColors.activeBlue;
     if (widget.content.colors != null) {
       highlightColor = widget.content.colors![0];
     }

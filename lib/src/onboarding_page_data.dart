@@ -5,7 +5,7 @@ class OnboardingPageData {
   final List<String> texts;
   final List<Widget> images;
   final List<String>? prices;
-  final List<CupertinoDynamicColor>? colors;
+  final List<Color>? colors;
 
   OnboardingPageData({
     required this.title,
