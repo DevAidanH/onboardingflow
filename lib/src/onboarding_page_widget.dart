@@ -39,10 +39,10 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget> {
             Page1(onNext: () async {_pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeInOut);}, content: widget.pageContent[1]),
 
             //Page 2
-            Page2(onNext: () async {_pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeInOut);}, content: widget.pageContent[2]),
+            Page2(onNext: widget.pageContent.length != 4 ? () {Navigator.pushReplacement(context, widget.appRoute);} : () async {_pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeInOut);}, content: widget.pageContent[2], isLastpage: widget.pageContent.length != 4 ? true : false,),
 
             //Paywall
-            Paywall(onNext: () {Navigator.pushReplacement(context, widget.appRoute);}, content: widget.pageContent[3])
+            if(widget.pageContent.length == 4)Paywall(onNext: () {Navigator.pushReplacement(context, widget.appRoute);}, content: widget.pageContent[3])
           ],
         )
       )

@@ -4,7 +4,8 @@ import 'package:onboardingflow/src/onboarding_page_data.dart';
 class Page2 extends StatelessWidget {
   final VoidCallback onNext;
   final OnboardingPageData content;
-  const Page2({super.key, required this.onNext, required this.content});
+  final bool isLastpage;
+  const Page2({super.key, required this.onNext, required this.content, required this.isLastpage});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class Page2 extends StatelessWidget {
         CupertinoButton.filled(
           onPressed: () => onNext(),
           color: highlightColor,
-          child: Text("Next"),
+          child: Text(isLastpage ? "Get Started" : "Next"),
         ),
         SizedBox(height: 30),
       ],
